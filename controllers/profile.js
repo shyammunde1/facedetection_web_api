@@ -17,4 +17,4 @@ const profileHandler=(req, res,db) => {
     profileHandler
   }
 
-  // export default profileHandler;
+  // export default profileHandler;..
