@@ -9,6 +9,10 @@ const profile = require("./controllers/profile");
 const signin = require("./controllers/signin");
 const image = require("./controllers/image");
 
+// import handleRegister from "./controllers/register";
+// import signinHandler from "./controllers/signin";
+// import profileHandler from "./controllers/profile";
+
 const app = express();
 
 app.use(express.json());
@@ -17,10 +21,13 @@ app.use(cors());
 const db = knex({
   client: "pg",
   connection: {
-    host: "127.0.0.1",
-    user: "postgres",
-    password: "test",
-    database: "smartbrain",
+    connectionString: process.env.DATABASE_URL,
+    ssl: { rejectUnauthorized: false },
+    host: process.env.DATABASE_HOST,
+    Port: 5432,
+    user: process.env.DATABASE_USER,
+    password: process.env.DATABASE_PW,
+    database: process.env.DATABASE_DB,
   },
 });
 // console.log(

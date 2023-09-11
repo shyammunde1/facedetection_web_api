@@ -35,6 +35,8 @@ const signinHandler=( db,bcrypt) =>(req, res)=> {
     // }
   }
 
-  module.exports={
-    signinHandler
-  }
+  module.exports = {
+    signinHandler: signinHandler,
+  };
+
+//  export default signinHandler;

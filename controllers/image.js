@@ -55,3 +55,5 @@ module.exports = {
   imageHandler,
   handleAPICall,
 };
+
+// export default { imageHandler, handleAPICall };
